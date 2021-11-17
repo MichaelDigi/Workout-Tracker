@@ -28,7 +28,6 @@ function duration(data) {
 function populateChart(data) {
   const durations = duration(data);
   const pounds = calculateTotalWeight(data);
-  const names = workoutNames(data);
 
   const line = document.querySelector("#canvas").getContext("2d");
   const bar = document.querySelector("#canvas2").getContext("2d");
