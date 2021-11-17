@@ -18,13 +18,17 @@ function calculateTotalWeight(data) {
 function duration(data) {
   let durations = [];
   data.forEach((workout) => {
-    durations.push(workout.duration);
+    workout.exercises.forEach((exercise) => {
+      durations.push(exercise.duration);
+    }) 
   });
+  return durations;
 }
 
 function populateChart(data) {
-  const durations = data.map(({ totalDuration }) => totalDuration);
+  const durations = duration(data);
   const pounds = calculateTotalWeight(data);
+  const names = workoutNames(data);
 
   const line = document.querySelector("#canvas").getContext("2d");
   const bar = document.querySelector("#canvas2").getContext("2d");

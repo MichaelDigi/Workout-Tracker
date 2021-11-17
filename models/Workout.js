@@ -37,7 +37,7 @@ const workouts = new Schema({
       },
     },
   ],
-  totalDur: {
+  totalDuration: {
     type: Number,
   },
 });

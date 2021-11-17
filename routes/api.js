@@ -11,7 +11,7 @@ router.get("/api/workouts", (req, res) => {
         workout.exercises.forEach((ex) => {
           time += ex.duration;
         });
-        workout.totalDur = time;
+        workout.totalDuration = time;
       });
 
       res.json(allWorkouts);
@@ -26,7 +26,7 @@ router.put("/api/workouts/:id", (req, res) => {
   db.Workout.findOneAndUpdate(
     { id: req.params.id },
     {
-      $inc: { totalDur: req.body.duration },
+      $inc: { totalDuration: req.body.duration },
       $push: { exercises: req.body },
     },
     { new: true }
