@@ -23,7 +23,7 @@
   
 
   ## Deployed Application
-  https://uoftnotetaker.herokuapp.com/notes
+  https://uoft-fitness-track.herokuapp.com/?id=6197df59626358001691e7d0
 
   ## About Me/Contact Me
   GitHub Link: [GitHub](https://github.com/MichaelDigi)
